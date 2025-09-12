@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integration Orbit Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #e6f0fa 100%);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .center-logo {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 0 25px rgba(74,144,226,0.5);
+      animation: logoPulse 3s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    .brand-icon {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 5;
+    }
+
+    .brand-icon img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+
+    .brand-icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    line {
+      stroke: url(#gradLine);
+      stroke-width: 2;
+      stroke-dasharray: 6;
+      animation: dashMove 3s linear infinite;
+    }
+
+    @keyframes logoPulse {
+      0% { box-shadow: 0 0 15px rgba(74,144,226,0.3); }
+      50% { box-shadow: 0 0 30px rgba(74,144,226,0.6); }
+      100% { box-shadow: 0 0 15px rgba(74,144,226,0.3); }
+    }
+
+    @keyframes dashMove {
+      to { stroke-dashoffset: -20; }
+    }
+  </style>
+</head>
+<body>
+  <!-- SVG lines -->
+  <svg>
+    <defs>
+      <linearGradient id="gradLine" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4a90e2" stop-opacity="0.2" />
+        <stop offset="50%" stop-color="#4a90e2" stop-opacity="1" />
+        <stop offset="100%" stop-color="#4a90e2" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Company logo -->
+  <div class="center-logo">Company<br>Logo</div>
+
+  <script>
+    const brands = [
+      { name: "Microsoft", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
+      { name: "AWS", img: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+      { name: "Salesforce", img: "https://upload.wikimedia.org/wikipedia/en/8/83/Salesforce_logo.svg" },
+      { name: "ServiceNow", img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/ServiceNow_logo.svg" },
+      { name: "SAP", img: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
+      { name: "Workday", img: "https://upload.wikimedia.org/wikipedia/commons/7/73/Workday_Logo.svg" },
+      { name: "Dropbox", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" },
+      { name: "Google Cloud", img: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" },
+      { name: "Slack", img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_Icon.svg" },
+      { name: "Oracle", img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" }
+    ];
+
+    const center = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    const radius = 250;
+    const svg = document.querySelector("svg");
+    const icons = [];
+    const lines = [];
+
+    // create brand icons + lines
+    brands.forEach((brand, i) => {
+      const angle = (i / brands.length) * 2 * Math.PI;
+
+      const icon = document.createElement("div");
+      icon.className = "brand-icon";
+      const img = document.createElement("img");
+      img.src = brand.img;
+      img.alt = brand.name;
+      icon.appendChild(img);
+      document.body.appendChild(icon);
+
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      svg.appendChild(line);
+
+      icons.push({ el: icon, angle });
+      lines.push(line);
+    });
+
+    function animate() {
+      const time = Date.now() * 0.001;
+
+      icons.forEach((iconObj, i) => {
+        const angle = iconObj.angle + time * 0.2; // rotation speed
+        const wiggleX = Math.sin(time * 2 + i) * 20;
+        const wiggleY = Math.cos(time * 2 + i) * 20;
+
+        const x = center.x + radius * Math.cos(angle) + wiggleX;
+        const y = center.y + radius * Math.sin(angle) + wiggleY;
+
+        iconObj.el.style.left = `${x - 35}px`;
+        iconObj.el.style.top = `${y - 35}px`;
+
+        lines[i].setAttribute("x1", center.x);
+        lines[i].setAttribute("y1", center.y);
+        lines[i].setAttribute("x2", x);
+        lines[i].setAttribute("y2", y);
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+    window.addEventListener("resize", () => {
+      center.x = window.innerWidth / 2;
+      center.y = window.innerHeight / 2;
+    });
+  </script>
+</body>
+</html>
