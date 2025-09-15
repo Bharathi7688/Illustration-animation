@@ -11,12 +11,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #0f172a;
+      background:transparent;
       overflow: hidden;
       font-family: 'Arial', sans-serif;
     }
 
     .circle-container {
+      
       position: relative;
       width: 600px;
       height: 600px;
@@ -31,7 +32,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       transition: all 0.5s ease;
       z-index: 10;
@@ -58,19 +59,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 20;
-      color: white;
       font-size: 42px;
       font-weight: bold;
       letter-spacing: 2px;
       text-align: center;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
       animation: pulse 2s infinite;
     }
 
     .connection-line {
       position: absolute;
       width: 2px;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+      background: gray;
       transform-origin: top left;
       z-index: 5;
       transition: opacity 1s ease;
@@ -83,7 +82,7 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
+      background:rgba(0, 0, 255, 0.14);
       transform: translate(-50%, -50%) scale(0);
       opacity: 0;
       z-index: 15;
@@ -93,11 +92,11 @@
     @keyframes pulse {
       0%, 100% { 
         transform: translate(-50%, -50%) scale(1);
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 20px rgba(156, 156, 156, 0.5);
       }
       50% { 
         transform: translate(-50%, -50%) scale(1.05);
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 30px rgba(47, 47, 47, 0.8);
       }
     }
 
@@ -118,19 +117,23 @@
 </head>
 <body>
   <div class="circle-container" id="circle-container">
-    <div class="central-object">TENXITY</div>
+    <div class="central-object"><img src="/Illustration-animation/img 2.png" alt=""></div>
   </div>
 
   <script>
     const apps = [
       { name: "Microsoft", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
       { name: "AWS", img: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-      { name: "Salesforce", img: "https://upload.wikimedia.org/wikipedia/en/8/83/Salesforce_logo.svg" },
-      { name: "ServiceNow", img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/ServiceNow_logo.svg" },
+      { name: "teams", img: "/Illustration-animation/MS Teams.png" },
+      { name: "ServiceNow", img: "/Illustration-animation/Adobe Experience Manager.png" },
       { name: "SAP", img: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
-      { name: "Workday", img: "https://upload.wikimedia.org/wikipedia/commons/7/73/Workday_Logo.svg" },
+      { name: "Workday", img: "/Illustration-animation/azure.png" },
       { name: "Dropbox", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" },
-      { name: "Google Cloud", img: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" },
+      { name: "Google Cloud", img: "/Illustration-animation/Google Cloud Platform.png" },
+      { name: "Oracle", img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
+      { name: "Box", img: "/Illustration-animation/HubSpot.png" },
+      { name: "Atlassian", img: "/Illustration-animation/Okta_idmCKbU44P_1.png" },
+      { name: "Slack", img: "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" }
     ];
 
     const container = document.getElementById('circle-container');
