@@ -1,15 +1,15 @@
 const apps = [
   { name: "Microsoft", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "AWS", img: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-  { name: "teams", img: "/Illustration-animation/MS Teams.png" },
-  { name: "ServiceNow", img: "/Illustration-animation/Adobe Experience Manager.png" },
+  { name: "teams", img: "MS Teams.png" },
+  { name: "ServiceNow", img: "Adobe Experience Manager.png" },
   { name: "SAP", img: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
-  { name: "Workday", img: "/Illustration-animation/azure.png" },
+  { name: "Workday", img: "azure.png" },
   { name: "Dropbox", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" },
-  { name: "Google Cloud", img: "/Illustration-animation/Google Cloud Platform.png" },
+  { name: "Google Cloud", img: "Google Cloud Platform.png" },
   { name: "Oracle", img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
-  { name: "Box", img: "/Illustration-animation/HubSpot.png" },
-  { name: "Atlassian", img: "/Illustration-animation/Okta_idmCKbU44P_1.png" },
+  { name: "Box", img: "HubSpot.png" },
+  { name: "Atlassian", img: "Okta_idmCKbU44P_1.png" },
   { name: "Slack", img: "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" }
 ];
 
