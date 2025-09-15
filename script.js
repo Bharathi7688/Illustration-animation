@@ -5,7 +5,7 @@ const apps = [
   { name: "ServiceNow", img: "Adobe Experience Manager.png" },
   { name: "SAP", img: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
   { name: "Workday", img: "azure.png" },
-  { name: "Dropbox", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" },
+  { name: "Dropbox", img: "wordpress-logo.png" },
   { name: "Google Cloud", img: "Google Cloud Platform.png" },
   { name: "Oracle", img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
   { name: "Box", img: "HubSpot.png" },
