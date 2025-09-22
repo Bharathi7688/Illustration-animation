@@ -1,16 +1,16 @@
 const apps = [
-  { name: "Microsoft", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-  { name: "AWS", img: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-  { name: "teams", img: "MS Teams.png" },
-  { name: "ServiceNow", img: "Adobe Experience Manager.png" },
-  { name: "SAP", img: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
-  { name: "Workday", img: "azure.png" },
-  { name: "Dropbox", img: "wordpress-logo.png" },
-  { name: "Google Cloud", img: "Google Cloud Platform.png" },
-  { name: "Oracle", img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
-  { name: "Box", img: "HubSpot.png" },
-  { name: "Atlassian", img: "Okta_idmCKbU44P_1.png" },
-  { name: "Slack", img: "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" }
+  { name: "Microsoft", img: "/Microsoft.svg" },
+  { name: "AWS", img: "/AWS.svg" },
+  { name: "teams", img: "/TEAMS.svg" },
+  { name: "Salesforce", img: "/Salesforce.svg" },
+  { name: "SAP", img: "/SAP.svg" },
+  { name: "Azure", img: "/Azure.svg" },
+  { name: "Apple", img: "/Apple.svg" },
+  { name: "Google Cloud", img: "/GoogleCloud.svg" },
+  { name: "Okta", img: "/OKTA.svg" },
+  { name: "Oracle", img: "/oracle.svg" },
+  { name: "Adobe", img: "/adobe_marketo_engage.svg" },
+  { name: "Sage", img: "/sage.svg" }
 ];
 
 const container = document.getElementById('circle-container');

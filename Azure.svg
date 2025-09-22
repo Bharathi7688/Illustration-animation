@@ -1,0 +1,30 @@
+<svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="microsoft_azure_portal_symbol.svg" clip-path="url(#clip0_408_509)">
+<g id="Group">
+<path id="Vector" d="M13.992 0H26.424L13.536 38.6416C13.272 39.4663 12.504 40 11.664 40H1.968C0.864 40 0 39.1025 0 38.0109C0 37.7926 0.024 37.5743 0.096 37.3802L12.12 1.3584C12.384 0.557914 13.152 0 13.992 0Z" fill="url(#paint0_linear_408_509)"/>
+<path id="Vector_2" d="M32.0642 25.9066H12.3602C11.8562 25.9066 11.4482 26.319 11.4482 26.8284C11.4482 27.0952 11.5442 27.3378 11.7362 27.5076L24.4082 39.4421C24.7682 39.7817 25.2722 39.9757 25.7762 39.9757H36.9362L32.0642 25.9066Z" fill="#0078D4"/>
+<path id="Vector_3" d="M13.9922 0C13.1282 0 12.3602 0.557914 12.1202 1.38266L0.120213 37.3075C-0.239787 38.3505 0.288213 39.4906 1.32021 39.8545C1.53621 39.9272 1.75221 39.9757 1.99221 39.9757H11.9042C12.6482 39.8302 13.2722 39.2965 13.5362 38.5688L15.9362 31.4372L24.4802 39.5391C24.8402 39.8302 25.2962 40 25.7522 40H36.8642L31.9922 25.9066H17.7842L26.4722 0H13.9922Z" fill="url(#paint1_linear_408_509)"/>
+<path id="Vector_4" d="M29.8802 1.3584C29.6162 0.533657 28.8482 0 28.0082 0H14.1602C15.0002 0 15.7682 0.557914 16.0322 1.3584L28.0322 37.356C28.3922 38.399 27.8162 39.5391 26.7842 39.8787C26.5922 39.9515 26.3762 39.9757 26.1602 39.9757H40.0082C41.1122 39.9757 41.9762 39.0782 41.9762 37.9867C41.9762 37.7683 41.9522 37.55 41.8802 37.356L29.8802 1.3584Z" fill="url(#paint2_linear_408_509)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_408_509" x1="18.5299" y1="2.96424" x2="5.37499" y2="41.4153" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0765B6"/>
+</linearGradient>
+<linearGradient id="paint1_linear_408_509" x1="22.5616" y1="20.9226" x2="19.5698" y2="21.9235" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.3"/>
+<stop offset="0.071" stop-opacity="0.2"/>
+<stop offset="0.321" stop-opacity="0.1"/>
+<stop offset="0.623" stop-opacity="0.05"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_408_509" x1="21.0126" y1="1.80512" x2="35.4465" y2="39.8518" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3BC9F3"/>
+<stop offset="1" stop-color="#2892DF"/>
+</linearGradient>
+<clipPath id="clip0_408_509">
+<rect width="42" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
